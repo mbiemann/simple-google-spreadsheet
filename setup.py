@@ -1,7 +1,7 @@
 import setuptools
 
 _name = 'simple_google_spreadsheet'
-_desc = 'A Google SpreadSheet class to simplify the integration'
+_desc = 'A module class to simplify the integration of your data with a sheet in Google SpreadSheet'
 _url = 'https://github.com/mbiemann/simple-google-spreadsheet'
 _reqs = [
     'google-auth-oauthlib',

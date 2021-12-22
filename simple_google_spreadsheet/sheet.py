@@ -2,7 +2,7 @@ import pickle
 import google_auth_oauthlib
 from googleapiclient.discovery import build
 
-class SpreadSheet():
+class Sheet():
 
     def __init__(self, spreadsheet_id, client_id, client_secret):
 
