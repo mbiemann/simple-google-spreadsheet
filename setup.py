@@ -4,8 +4,9 @@ _name = 'simple_google_spreadsheet'
 _desc = 'A module class to simplify the integration of your data with a sheet in Google SpreadSheet'
 _url = 'https://github.com/mbiemann/simple-google-spreadsheet'
 _reqs = [
+    'google-api-python-client',
+    'google-auth-httplib2',
     'google-auth-oauthlib',
-    'google-api-python-client'
 ]
 
 with open('README.md', 'r', encoding='utf-8') as fh:
