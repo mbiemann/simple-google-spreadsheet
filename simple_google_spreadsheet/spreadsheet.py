@@ -81,7 +81,7 @@ class SpreadSheet():
             range=f'{sheet}!{range}'
         ).execute()
 
-    def get_values(self, sheet: str, range: str = None, cast_boolean: list = [], cast_float: list = []) -> list:
+    def get_values(self, sheet: str, range: str = None, cast_boolean: list = [], cast_float: list = [], cast_int: list = []) -> list:
 
         if not range:        
             for fsheet in self._service().get(spreadsheetId=self._spreadsheet_id).execute()['sheets']:
@@ -114,6 +114,9 @@ class SpreadSheet():
                         cel = True if cel == 'TRUE' or cel == '1' else False
                     elif col in cast_float and cel is not None:
                         cel = float(cel.replace('.','').replace(',','.'))
+                        cel = True if cel == 'TRUE' or cel == '1' else False
+                    elif col in cast_int and cel is not None:
+                        cel = int(cel.replace('.','').replace(',','.'))
                     row[col] = cel
                 data.append(row)
             num += 1
