@@ -114,7 +114,6 @@ class SpreadSheet():
                         cel = True if cel == 'TRUE' or cel == '1' else False
                     elif col in cast_float and cel is not None:
                         cel = float(cel.replace('.','').replace(',','.'))
-                        cel = True if cel == 'TRUE' or cel == '1' else False
                     elif col in cast_int and cel is not None:
                         cel = int(cel.replace('.','').replace(',','.'))
                     row[col] = cel
